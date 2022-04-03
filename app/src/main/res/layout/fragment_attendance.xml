@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/mainLayout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/dateIconImageView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="15dp"
+
+            android:contentDescription="@null"
+
+            android:src="@drawable/ic_baseline_calendar_today_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/showDateTextView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="38dp"
+            android:ellipsize="end"
+
+            android:fontFamily="@font/esamanru_medium"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dateIconImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <kro.kr.rhya_network.online_attendance.lib.com_github_amarjain07_StickyScrollView_1_0_2.ui.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:overScrollMode="never"
+
+        android:scrollbars="none"
+
+        app:stickyHeader="@+id/controlLayout">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <!--===========================================-->
+            <!--============== Calendar View ==============-->
+            <!--===========================================-->
+            <com.applikeysolutions.cosmocalendar.view.CalendarView
+                android:id="@+id/calendarView"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                tools:visibility="gone"/>
+            <!--===========================================-->
+            <!--===========================================-->
+            <!--===========================================-->
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/controlLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/customTextViewColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+
+                    android:fontFamily="@font/esamanru_medium"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:text="@string/online_attendance_manager_menu" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/classNameSelectIconImageView"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+
+                        android:layout_marginTop="15dp"
+
+                        android:contentDescription="@null"
+
+                        android:src="@drawable/ic_noun_class"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/selectedClassName"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+
+                        android:ellipsize="end"
+                        android:fontFamily="@font/esamanru_light"
+                        android:gravity="start"
+                        android:maxLength="15"
+
+                        android:singleLine="true"
+                        android:textSize="13sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/classNameSelectIconImageView"
+                        app:layout_constraintStart_toEndOf="@+id/classNameSelectIconImageView"
+                        app:layout_constraintTop_toTopOf="@+id/classNameSelectIconImageView" />
+
+                    <android.widget.Button
+                        android:id="@+id/classNameSelectButton"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/button_2"
+                        android:fontFamily="@font/esamanru_medium"
+                        android:gravity="center"
+                        android:stateListAnimator="@null"
+
+                        android:text="@string/class_select"
+                        android:textSize="13sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/classNameSelectIconImageView"
+                        app:layout_constraintStart_toEndOf="@+id/selectedClassName"
+                        app:layout_constraintTop_toTopOf="@+id/classNameSelectIconImageView" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTimeSelect"
+
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="2dp"
+
+                        android:spinnerMode="dropdown"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/classNameSelectButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/classNameSelectButton"
+                        app:layout_constraintTop_toTopOf="@+id/classNameSelectButton" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/attendanceLayoutForC"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/classNameSelectButton">
+
+                        <Spinner
+                            android:id="@+id/spinnerAttendanceCheck"
+
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+
+                            android:layout_centerHorizontal="true"
+
+                            android:layout_marginStart="15dp"
+
+                            android:layout_marginEnd="10dp"
+                            android:spinnerMode="dropdown"
+
+                            app:layout_constraintBottom_toBottomOf="@+id/attendanceCheckButton"
+                            app:layout_constraintEnd_toStartOf="@+id/attendanceCheckButton"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.ornach.nobobutton.NoboButton
+                            android:id="@+id/attendanceCheckButton"
+
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+
+                            android:layout_marginEnd="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:nb_backgroundColor="@color/white"
+                            app:nb_borderColor="@color/white_2"
+                            app:nb_borderWidth="1dp"
+                            app:nb_focusColor="@color/dark_5"
+                            app:nb_radius="5dp"
+                            app:nb_text="적용"
+                            app:nb_textColor="@color/black"
+                            app:nb_textSize="15sp" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="15dp"
+
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:weightSum="3"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinnerAttendanceCheck">
+
+                            <com.ornach.nobobutton.NoboButton
+                                android:id="@+id/allSelectButton"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="5dp"
+
+                                android:layout_weight="1"
+
+                                app:nb_backgroundColor="@color/dark_1"
+                                app:nb_borderWidth="1dp"
+                                app:nb_focusColor="@color/dark_5"
+                                app:nb_radius="5dp"
+                                app:nb_text="@string/all_select"
+                                app:nb_textColor="@color/white"
+                                app:nb_textSize="15sp" />
+
+                            <com.ornach.nobobutton.NoboButton
+                                android:id="@+id/selectCancelButton"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginStart="5dp"
+
+                                android:layout_weight="2"
+
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/allSelectButton"
+                                app:nb_backgroundColor="@color/white"
+                                app:nb_borderColor="@color/white_2"
+                                app:nb_borderWidth="1dp"
+                                app:nb_focusColor="@color/dark_5"
+                                app:nb_radius="5dp"
+                                app:nb_text="@string/select_cancel"
+                                app:nb_textColor="@color/black"
+                                app:nb_textSize="15sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/subTapLayout"
+
+                        style="@style/customTabLayoutStyle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginStart="15dp"
+
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+
+                        android:layout_weight="0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/attendanceLayoutForC"
+                        app:tabTextAppearance="@style/customTabLayoutStyle">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/class_info" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/attendance" />
+                    </com.google.android.material.tabs.TabLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viewSelector"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+
+                    android:background="@color/white_1" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/customTextViewColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:ellipsize="end"
+
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textSize="15.5sp"
+                    android:text="@string/class_teacher_info" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp">
+
+                    <ImageView
+                        android:id="@+id/teacherImage"
+
+                        android:layout_width="130dp"
+                        android:layout_height="0dp"
+
+                        android:layout_marginStart="15dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginBottom="10dp"
+                        android:contentDescription="@null"
+
+                        android:scaleType="centerCrop"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/teacherName"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+
+                        android:ellipsize="end"
+                        android:fontFamily="@font/esamanru_light"
+                        android:gravity="start"
+                        android:maxLength="15"
+                        android:singleLine="true"
+
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/teacherImage"
+                        app:layout_constraintTop_toTopOf="@+id/teacherImage" />
+
+                    <TextView
+                        android:id="@+id/teacherDepartment"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+
+                        android:textColor="@color/blue_3"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/esamanru_light"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:textSize="12sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/teacherName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/teacherName" />
+
+                    <ImageView
+                        android:id="@+id/callIconImageView"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+
+                        android:layout_marginStart="15dp"
+
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@null"
+
+                        android:src="@drawable/ic_baseline_call_24"
+
+                        app:layout_constraintStart_toEndOf="@+id/teacherImage"
+                        app:layout_constraintTop_toBottomOf="@+id/teacherName" />
+
+                    <TextView
+                        android:id="@+id/teacherPhoneNumber"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+
+                        android:ellipsize="end"
+                        android:fontFamily="@font/esamanru_light"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:textSize="12.5sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/callIconImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/callIconImageView"
+                        app:layout_constraintTop_toTopOf="@+id/callIconImageView" />
+
+                    <ImageView
+                        android:id="@+id/emailIconImageView"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="15dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:contentDescription="@null"
+
+                        android:src="@drawable/ic_baseline_email_24"
+
+                        app:layout_constraintStart_toEndOf="@+id/teacherImage"
+                        app:layout_constraintTop_toBottomOf="@+id/callIconImageView" />
+
+                    <TextView
+                        android:id="@+id/teacherEmailAddress"
+
+                        style="@style/customTextViewColor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+
+                        android:ellipsize="end"
+                        android:fontFamily="@font/esamanru_light"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:textSize="12.5sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/emailIconImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/callIconImageView"
+                        app:layout_constraintTop_toTopOf="@+id/emailIconImageView" />
+
+
+                    <com.ornach.nobobutton.NoboButton
+                        android:id="@+id/callButton"
+
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="1dp"
+
+                        android:fontFamily="@font/esamanru_light"
+                        app:layout_constraintBottom_toBottomOf="@+id/teacherImage"
+                        app:layout_constraintStart_toStartOf="@+id/emailIconImageView"
+                        app:nb_backgroundColor="@color/dark_1"
+                        app:nb_focusColor="@color/dark_5"
+                        app:nb_fontIcon="&#xf095;"
+                        app:nb_radius="5dp"
+                        app:nb_text="@string/calling"
+                        app:nb_textColor="@color/white"
+                        app:nb_textSize="15sp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/recyclerViewTitleTextView"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:ellipsize="end"
+
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textSize="15.5sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/studentInfoRecyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+
+                    tools:visibility="gone"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/attendanceLayout"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/viewSelector2"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+
+                        android:background="@color/white_1" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/attendanceInfoRecyclerView"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/attendanceTableRecyclerView"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </kro.kr.rhya_network.online_attendance.lib.com_github_amarjain07_StickyScrollView_1_0_2.ui.StickyScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

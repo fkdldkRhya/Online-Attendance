@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/mainLayout"
+
+    android:background="@color/white"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/accountSyncLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/accountSyncImageView"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="50dp"
+
+            android:contentDescription="@null"
+
+            android:src="@drawable/ic_baseline_sync_24"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/accountSyncTextView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+
+            android:fontFamily="@font/esamanru_medium"
+            android:gravity="center"
+            android:text="@string/account_sync"
+
+            android:textSize="17sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountSyncImageView" />
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:matProg_barColor="?attr/progressWheelColor"
+            app:matProg_progressIndeterminate="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/accountSyncFailLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/accountSyncFailImageView"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="50dp"
+
+            android:contentDescription="@null"
+
+            android:src="@drawable/ic_baseline_sync_problem_24"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/accountSyncFailTitleTextView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+
+            android:fontFamily="@font/esamanru_medium"
+            android:gravity="center"
+            android:text="@string/account_sync_fail_title"
+
+            android:textSize="17sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountSyncFailImageView" />
+
+        <TextView
+            android:id="@+id/accountSyncFailMessageTextView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="center"
+            android:text="@string/account_sync_fail_message"
+            android:textSize="14sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountSyncFailTitleTextView" />
+
+        <android.widget.Button
+            android:id="@+id/accountRestartSyncButton"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+
+            android:layout_marginBottom="20dp"
+
+            android:background="@drawable/button_for_dialog_1"
+
+            android:stateListAnimator="@null"
+
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="center"
+            android:text="@string/restart_title"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/accountRequestSyncButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/viewSelector"
+
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+
+            android:layout_marginStart="45dp"
+
+            android:layout_marginEnd="45dp"
+            android:background="@color/white_1"
+            app:layout_constraintBottom_toTopOf="@+id/accountRequestSyncButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountRestartSyncButton" />
+
+        <android.widget.Button
+            android:id="@+id/accountRequestSyncButton"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginStart="45dp"
+
+            android:layout_marginEnd="45dp"
+
+            android:layout_marginBottom="50dp"
+
+            android:background="@drawable/button_for_dialog_1"
+
+            android:stateListAnimator="@null"
+
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="center"
+            android:text="@string/account_sync_request_title"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/accountSyncSuccessLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/teacherImageView"
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+
+            android:layout_marginEnd="20dp"
+
+            android:layout_marginBottom="50dp"
+            android:contentDescription="@null"
+
+            app:layout_constraintBottom_toTopOf="@+id/accountSyncSuccessWelcomeTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:siRadius="100dp" />
+
+        <TextView
+            android:id="@+id/accountSyncSuccessWelcomeTitleTextView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/esamanru_medium"
+            android:gravity="center"
+
+            android:text="@string/welcome_message"
+
+            android:textSize="35sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/teacherNameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/teacherNameTextView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="25dp"
+
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="center"
+
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/schoolNameTextView"
+
+            style="@style/customTextViewColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="25dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="center"
+
+            android:maxLines="2"
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teacherNameTextView" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/customTextViewColor"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/tool_message"
+
+            android:textSize="13sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/schoolNameTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

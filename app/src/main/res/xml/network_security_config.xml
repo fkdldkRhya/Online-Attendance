@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        ## HTTP 연결 허용 도메인 ##
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true"></domain>
+    </domain-config>
+    -->
+</network-security-config>

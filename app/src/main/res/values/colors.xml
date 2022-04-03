@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--================= Public color =================-->
+    <color name="dark_1">#252525</color>
+    <color name="dark_2">#2E2E2E</color>
+    <color name="dark_3">#3C3C3C</color>
+    <color name="dark_4">#4E4E4E</color>
+    <color name="dark_5">#707070</color>
+    <color name="dark_6">#191919</color>
+    <color name="black">#FF000000</color>
+    <color name="black_1">#2B2B2B</color>
+    <color name="black_2">#1C1C1C</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_1">#D6D6D6</color>
+    <color name="white_2">#C1C1C1</color>
+    <color name="white_3">#8E8E8E</color>
+    <color name="white_4">#606060</color>
+    <color name="white_5">#EEEEEE</color>
+    <color name="gray_1">#656565</color>
+    <color name="blue_1">#5EA8FF</color>
+    <color name="blue_2">#3F97FF</color>
+    <color name="blue_3">#0075FF</color>
+    <!--================================================-->
+</resources>

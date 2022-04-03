@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">온라인 출석부</string>
+    <string name="account_sync">계정 동기화 중…</string>
+    <string name="account_sync_fail_title">계정 동기화 실패</string>
+    <string name="account_sync_fail_message">계정 동기화 실패하였습니다. 해당 계정에 <font color='#5EA8FF'>연동된 데이터가</font> 없거나 <font color='#5EA8FF'>일시적인 오류</font>일 수 있습니다. 연동된 계정이 없다면 아래 버튼을 통해 <font color='#5EA8FF'>계정 연동</font>을 진행해주세요. 만약 연동된 계정이 있음에도 불구하고 해당 오류가 지속해서 발생하는 경우 <font color='#5EA8FF'>관리자</font>에게 문의하여 주십시오.</string>
+    <string name="restart_title">재시도</string>
+    <string name="account_sync_request_title">계정 동기화 요청</string>
+    <string name="account_sync_key_input_title">계정 연동 인증키 입력</string>
+    <string name="account_sync_key_input_message">관리자를 통해 받은 계정 연동 <font color='#5EA8FF'>인증키</font>를 입력해 주십시오. 해당 인증키는 영문, 숫자로 되어있는 <font color='#5EA8FF'>36자리</font> 문자열입니다. (단, \`-\`도 입력해 주십시오)</string>
+    <string name="account_sync_dont_have_key_title">인증키가 없습니다</string>
+    <string name="account_sync_title">계정 동기화</string>
+    <string name="welcome_message">안녕하세요!</string>
+    <string name="tool_message">잠시만 기다려 주세요. <font color='#5EA8FF'>RHYA.Network</font> 서버에서 데이터를 불러오고 있습니다.</string>
+    <string name="attendance">출석부</string>
+    <string name="search">검색</string>
+    <string name="class_management">반 관리</string>
+    <string name="setting">설정</string>
+    <string name="online_attendance_manager_menu">온라인 출석부 관리 메뉴</string>
+    <string name="class_select">반 선택</string>
+    <string name="class_select_message">데이터를 불러올 <font color='#5EA8FF'>반</font>을 선택해 주십시오.</string>
+    <string name="load">불러오기</string>
+    <string name="class_teacher_info">담임 선생님 정보</string>
+    <string name="student_info">학생 정보</string>
+    <string name="calling">전화 걸기</string>
+    <string name="class_info">반 정보</string>
+    <string name="choice_text_1">구간 선택</string>
+    <string name="select_cancel">선택 취소</string>
+    <string name="all_select">전체 선택</string>
+    <string name="attendance_table_column_1">이름</string>
+    <string name="attendance_table_column_2">출석</string>
+    <string name="attendance_table_column_3">결석</string>
+    <string name="attendance_table_column_4">지각</string>
+    <string name="attendance_table_column_5">조퇴</string>
+    <string name="attendance_table_column_6">결과</string>
+    <string name="null_text">NA</string>
+    <string name="writer_1">작성자:</string>
+    <string name="attendance_info">출결 정보</string>
+    <string name="save">저장</string>
+    <string name="student_info_edit">학생 정보 수정</string>
+    <string name="student_description_edit_message">아래의 정보를 수정해 <font color='#5EA8FF'>학생</font>의 <font color='#5EA8FF'>부과 정보</font>를 수정할 수 있습니다. 최대 300자까지 입력할 수 있습니다.</string>
+    <string name="name_1">이름:</string>
+    <string name="student_number">번호: </string>
+    <string name="student_sex">성별: </string>
+    <string name="date_select">날짜 선택</string>
+</resources>

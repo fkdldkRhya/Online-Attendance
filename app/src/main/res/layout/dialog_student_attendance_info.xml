@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_2"
+    android:orientation="vertical"
+
+    android:id="@+id/mainLayout"
+
+    android:backgroundTint="?attr/dialogBackgroundColor"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/customTextViewColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+
+        android:layout_gravity="center"
+
+        android:textSize="18sp"
+        android:fontFamily="@font/esamanru_medium"
+        android:text="@string/student_info_edit"/>
+
+    <TextView
+        style="@style/customTextViewColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+
+        android:fontFamily="@font/esamanru_light"
+        android:gravity="start"
+        android:text="@string/student_description_edit_message"
+        android:textSize="13sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            style="@style/customTextViewColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/name_1"
+
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="start"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/studentName"
+
+            android:layout_marginStart="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="start"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:textColor="@color/blue_3"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/studentDescriptionEditText"
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+
+            android:autofillHints="@null"
+            android:scrollHorizontally="false"
+            android:fontFamily="@font/esamanru_light"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:maxLength="300"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="LabelFor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <android.widget.Button
+        android:id="@+id/saveButton"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="25dp"
+
+        android:background="@drawable/button_for_dialog_1"
+
+        android:stateListAnimator="@null"
+
+        android:fontFamily="@font/esamanru_light"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+</LinearLayout>

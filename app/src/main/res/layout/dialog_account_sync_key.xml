@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_2"
+    android:orientation="vertical"
+
+    android:id="@+id/mainLayout"
+
+    android:backgroundTint="?attr/dialogBackgroundColor"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/customTextViewColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+
+        android:layout_gravity="center"
+
+        android:textSize="18sp"
+        android:fontFamily="@font/esamanru_medium"
+        android:text="@string/account_sync_key_input_title"/>
+
+    <TextView
+        style="@style/customTextViewColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+
+        android:fontFamily="@font/esamanru_light"
+        android:gravity="start"
+        android:text="@string/account_sync_key_input_message"
+        android:textSize="13sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/accountSyncKeyImageView"
+
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="15dp"
+
+            android:contentDescription="@null"
+
+            android:src="@drawable/ic_baseline_key_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/accountSyncInputKeyEditText"
+
+            style="@style/customTextViewColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="14dp"
+
+            android:autofillHints="@null"
+
+            android:inputType="text"
+
+            android:textSize="14sp"
+            android:fontFamily="@font/esamanru_light"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/accountSyncKeyImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/accountSyncDontHaveKeyMessageTextView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="25dp"
+
+        android:layout_gravity="end"
+
+        android:fontFamily="@font/esamanru_light"
+        android:gravity="end"
+        android:text="@string/account_sync_dont_have_key_title"
+        android:textSize="13sp"
+        android:textColor="@color/black_1"/>
+
+    <android.widget.Button
+        android:id="@+id/accountRequestSyncButton"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="25dp"
+
+        android:background="@drawable/button_for_dialog_1"
+
+        android:stateListAnimator="@null"
+
+        android:fontFamily="@font/esamanru_light"
+        android:gravity="center"
+        android:text="@string/account_sync_title"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+</LinearLayout>

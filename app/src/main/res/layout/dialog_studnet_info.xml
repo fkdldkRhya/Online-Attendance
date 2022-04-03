@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/customTextViewColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+
+        android:ellipsize="end"
+        android:fontFamily="@font/esamanru_medium"
+        android:gravity="start"
+        android:maxLength="15"
+
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:text="@string/student_info"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/studentImage"
+
+                    android:layout_width="130dp"
+                    android:layout_height="170dp"
+
+                    android:layout_marginStart="15dp"
+
+                    android:contentDescription="@null"
+
+                    android:scaleType="centerCrop"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/studentName"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+
+                    android:ellipsize="end"
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="start"
+                    android:maxLength="15"
+                    android:singleLine="true"
+
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/studentImage"
+                    app:layout_constraintTop_toTopOf="@+id/studentImage" />
+
+                <TextView
+                    android:id="@+id/classInfo"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+
+                    android:ellipsize="end"
+                    android:fontFamily="@font/esamanru_light"
+
+                    android:gravity="start"
+                    android:maxLength="15"
+                    android:singleLine="true"
+
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/studentName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/studentName" />
+
+                <EditText
+                    android:id="@+id/studentDescriptionEditText"
+
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+
+                    android:autofillHints="@null"
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="start"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:scrollHorizontally="false"
+                    android:textSize="13sp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/studentImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/studentImage"
+                    app:layout_constraintTop_toBottomOf="@+id/studentSexTitle"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/studentNumberTitle"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="10dp"
+
+                    android:layout_marginTop="20dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="start"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:text="@string/student_number"
+                    android:textSize="14sp"
+
+                    app:layout_constraintStart_toEndOf="@+id/studentImage"
+                    app:layout_constraintTop_toBottomOf="@+id/studentName" />
+
+                <TextView
+                    android:id="@+id/studentNumber"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="start"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/studentNumberTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/studentName" />
+
+                <TextView
+                    android:id="@+id/studentSexTitle"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="10dp"
+
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="start"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:text="@string/student_sex"
+
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/studentImage"
+                    app:layout_constraintTop_toBottomOf="@+id/studentNumberTitle" />
+
+                <TextView
+                    android:id="@+id/studentSex"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/esamanru_light"
+                    android:gravity="start"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/studentNumberTitle"
+                    app:layout_constraintTop_toTopOf="@+id/studentSexTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/title1"
+
+                    style="@style/customTextViewColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="15dp"
+
+                    android:ellipsize="end"
+                    android:fontFamily="@font/esamanru_medium"
+                    android:gravity="start"
+                    android:maxLength="15"
+
+                    android:singleLine="true"
+                    android:textSize="18sp"
+                    android:text="@string/date_select"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:layout_marginStart="15dp"
+
+                    android:background="@drawable/checkbox_1"
+                    android:button="@null"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
